@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Portal Asesmen Seleksi Daring Mekanik &amp; Plant - PT KTC Coal Mining &amp; Energy</title>
+  <title>Technical Competency Portal (RMS v3.0) - PT KTC Coal Mining &amp; Energy</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome Icons -->
@@ -44,9 +44,9 @@
       <div class="flex items-center gap-3">
         <img src="logo-ktc.png" alt="Logo PT KTC" class="h-10 w-auto object-contain" onerror="this.style.display='none'">
         <div>
-          <div class="flex items-center gap-2">
+          <div class="flex flex-wrap items-center gap-2">
             <h1 class="text-sm sm:text-base font-black text-slate-900 tracking-wide uppercase">PT. KTC COAL MINING &amp; ENERGY</h1>
-            <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-amber-50 text-amber-700 border border-amber-200">Plant &amp; Workshop Site</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-amber-50 text-amber-700 border border-amber-200">RMS v3.0 &bull; Technical Competency Portal</span>
           </div>
           <p class="text-xs text-slate-500 font-medium">Asesmen Kompetensi Mekanik: Kematangan EQ, Integritas Kerja (SJT), K3LH Workshop, &amp; Uji Teknis Spesifik</p>
         </div>
@@ -112,7 +112,7 @@
         <div class="relative z-10 max-w-3xl space-y-4">
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-300 text-xs font-bold tracking-wide">
             <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
-            <span>PORTAL ASESMEN KOMPETENSI MEKANIK SITE MUARA TEWEH</span>
+            <span>AP SYSTEMS &bull; RMS v3.0 &bull; TECHNICAL COMPETENCY PORTAL</span>
           </div>
 
           <h2 class="text-2xl sm:text-4xl font-black text-white leading-tight tracking-tight">
@@ -222,7 +222,7 @@
               <span class="text-xs font-black text-amber-600 font-mono-code">50 Menit</span>
             </div>
             <h4 class="text-sm font-bold text-slate-900">Kompetensi Teknis Spesifik</h4>
-            <p class="text-xs text-slate-600 leading-relaxed">Uji analisa skematik dan parameter riil formasi: Volvo ADT E/F/G, HE Track, DT HOWO/Hino/Scania, Auto Electrician, Welder, Servicing, atau Tyreman.</p>
+            <p class="text-xs text-slate-600 leading-relaxed">Uji analisa skematik dan parameter riil formasi: Volvo ADT E/F/G, HE Track, DT HOWO/Hino/Scania, Auto Electrician, Welder, Servicing, Autolube &amp; Fire Suppression, atau Tyreman.</p>
           </div>
         </div>
       </div>
@@ -666,31 +666,55 @@
             <div class="w-7 h-7 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center text-xs font-black">3</div>
             <h4 class="text-xs font-bold text-slate-900">Bebas Pungutan Biaya</h4>
             <p class="text-[11px] text-slate-500 leading-relaxed">Seluruh proses rekrutmen tidak dipungut biaya apa pun. Waspadai segala bentuk penipuan yang mengatasnamakan PT KTC.</p>
-    <!-- Mobile Floating Bottom Action Dock -->
-    <div id="mobileExamDock" class="hidden fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 shadow-lg flex items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="text-xs font-bold text-slate-500">Progres:</span>
-        <span id="dockCounter" class="text-xs font-mono-code font-bold text-slate-800">0/20</span>
+          </div>
+        </div>
       </div>
-      <button onclick="confirmSubmitCurrentModule()" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black transition flex items-center gap-1.5 shadow-md active:scale-95">
-        <i class="fa-solid fa-lock text-[11px]"></i>
-        <span>Kunci &amp; Lanjut</span>
-      </button>
-    </div>
 
-    <!-- Floating Action Buttons (FAB) untuk Navigasi Scroll Cepat Atas & Bawah -->
-    <div id="examScrollFAB" class="hidden fixed bottom-20 sm:bottom-8 right-4 sm:right-6 z-40 flex flex-col gap-2">
-      <!-- Tombol Scroll ke Atas -->
-      <button type="button" onclick="fastScrollToTop()" title="Scroll Cepat ke Atas" class="w-11 h-11 bg-slate-900/90 hover:bg-amber-500 text-white hover:text-slate-950 rounded-2xl shadow-xl flex items-center justify-center transition border border-slate-700 active:scale-90 group backdrop-blur-sm">
-        <i class="fa-solid fa-chevron-up text-sm group-hover:-translate-y-0.5 transition-transform"></i>
-      </button>
-      <!-- Tombol Scroll ke Bawah -->
-      <button type="button" onclick="fastScrollToBottom()" title="Scroll Cepat ke Bawah" class="w-11 h-11 bg-slate-900/90 hover:bg-amber-500 text-white hover:text-slate-950 rounded-2xl shadow-xl flex items-center justify-center transition border border-slate-700 active:scale-90 group backdrop-blur-sm">
-        <i class="fa-solid fa-chevron-down text-sm group-hover:translate-y-0.5 transition-transform"></i>
-      </button>
+      <!-- Status Sinkronisasi Server -->
+      <div class="bg-white rounded-3xl border border-slate-200 p-5 shadow-sm space-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div id="syncStatusIcon" class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg shrink-0 border border-emerald-200">
+              <i class="fa-solid fa-cloud-arrow-up animate-bounce"></i>
+            </div>
+            <div>
+              <h4 id="syncStatusTitle" class="text-sm font-bold text-slate-900">Sinkronisasi Database Asesor Pusat</h4>
+              <p id="syncStatusSubtitle" class="text-xs text-slate-500">Lembar respon dan presensi telah tercatat secara resmi di server PT KTC...</p>
+            </div>
+          </div>
+          <div class="text-xs font-semibold px-3 py-1.5 rounded-xl bg-slate-50 text-slate-600 border border-slate-200 shrink-0 self-center sm:self-auto">
+            <i class="fa-solid fa-lock text-slate-400 mr-1"></i> Data Terkunci Resmi
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </main>
+
+  <!-- Mobile Floating Bottom Action Dock -->
+  <div id="mobileExamDock" class="hidden fixed bottom-0 left-0 right-0 z-30 lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 shadow-lg flex items-center justify-between gap-2">
+    <div class="flex items-center gap-2">
+      <span class="text-xs font-bold text-slate-500">Progres:</span>
+      <span id="dockCounter" class="text-xs font-mono-code font-bold text-slate-800">0/20</span>
+    </div>
+    <button onclick="confirmSubmitCurrentModule()" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black transition flex items-center gap-1.5 shadow-md active:scale-95">
+      <i class="fa-solid fa-lock text-[11px]"></i>
+      <span>Kunci &amp; Lanjut</span>
+    </button>
+  </div>
+
+  <!-- Floating Action Buttons (FAB) untuk Navigasi Scroll Cepat Atas & Bawah -->
+  <div id="examScrollFAB" class="hidden fixed bottom-20 sm:bottom-8 right-4 sm:right-6 z-50 flex flex-col gap-2">
+    <!-- Tombol Scroll ke Atas -->
+    <button type="button" onclick="fastScrollToTop()" title="Scroll Cepat ke Atas" class="w-11 h-11 bg-slate-900/90 hover:bg-amber-500 text-white hover:text-slate-950 rounded-2xl shadow-xl flex items-center justify-center transition border border-slate-700 active:scale-90 group backdrop-blur-sm">
+      <i class="fa-solid fa-chevron-up text-sm group-hover:-translate-y-0.5 transition-transform"></i>
+    </button>
+    <!-- Tombol Scroll ke Bawah -->
+    <button type="button" onclick="fastScrollToBottom()" title="Scroll Cepat ke Bawah" class="w-11 h-11 bg-slate-900/90 hover:bg-amber-500 text-white hover:text-slate-950 rounded-2xl shadow-xl flex items-center justify-center transition border border-slate-700 active:scale-90 group backdrop-blur-sm">
+      <i class="fa-solid fa-chevron-down text-sm group-hover:translate-y-0.5 transition-transform"></i>
+    </button>
+  </div>
 
   <!-- Dialog Peringatan Custom -->
   <div id="customDialogModal" class="hidden fixed inset-0 z-[9999] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
@@ -741,7 +765,7 @@
     
     <div class="pt-2 border-t border-slate-100 max-w-2xl mx-auto space-y-1">
       <p class="text-amber-600 text-xs font-bold tracking-wide">
-        Sistem Evaluasi Terpadu Rekrutmen Mekanik &amp; Spesialis Alat Berat Site Tambang
+        AP Systems &mdash; RMS v3.0 (Recruitment Management System) | Technical Competency Portal
       </p>
       <p class="text-slate-700 text-xs font-bold tracking-wide flex items-center justify-center gap-1.5">
         <span>Sistem ini dirancang dan dikembangkan secara khusus oleh</span>
@@ -775,6 +799,7 @@
     let currentModuleSecondsLeft = 0;
     let currentFontSizeLevel = 0;
     let isViolationCooldownActive = false;
+    let blurGraceTimeout = null;
 
     // Alokasi Durasi 4 Modul Mekanik (Total 90 Menit)
     const moduleDurations = {
@@ -819,6 +844,7 @@
       document.getElementById('viewExamArena').classList.add('hidden');
       document.getElementById('viewResults').classList.add('hidden');
       document.getElementById('mobileExamDock').classList.add('hidden');
+      if (document.getElementById('examScrollFAB')) document.getElementById('examScrollFAB').classList.add('hidden');
       document.getElementById('viewRegistration').classList.remove('hidden');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -828,12 +854,13 @@
       document.getElementById('viewExamArena').classList.add('hidden');
       document.getElementById('viewResults').classList.add('hidden');
       document.getElementById('mobileExamDock').classList.add('hidden');
+      if (document.getElementById('examScrollFAB')) document.getElementById('examScrollFAB').classList.add('hidden');
       document.getElementById('viewLandingPortal').classList.remove('hidden');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     // ==========================================
-    // VERIFIKASI NIK (JSONP) & FILTER KETAT FORMASI MEKANIK
+    // VERIFIKASI NIK (JSONP) & FILTER FORMASI MEKANIK
     // ==========================================
     function handleVerifyNik() {
       const nikInput = document.getElementById('candNik');
@@ -844,7 +871,7 @@
       const verifyBtnLabel = document.getElementById('btnVerifyNikLabel');
 
       if (cleanNik.length !== 16) {
-        showCustomDialog('Format NIK Belum Sesuai', 'Nomor Induk Kependudukan (NIK) wajib 16 digit angka sesuai KTP.', true);
+        showCustomDialog('Format NIK Belum Sesuai', 'Nomor Induk Kependudukan (NIK) wajib tepat 16 digit angka sesuai KTP.', true);
         return;
       }
 
@@ -863,7 +890,7 @@
 
           statusBox.className = 'p-3.5 rounded-xl border border-red-200 bg-red-50 text-red-700 text-xs space-y-1';
           statusBox.innerHTML = '<p class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation text-red-600"></i> Tidak Dapat Terhubung ke Server</p>' +
-            '<p class="text-[11px] leading-relaxed">Koneksi ke server Google Apps Script terhenti (Timeout). Pastikan deployment Apps Script telah disetel aksesnya ke <strong>"Anyone"</strong> dan Webhook URL valid.</p>';
+            '<p class="text-[11px] leading-relaxed">Koneksi ke server Google Apps Script terhenti (Timeout). Pastikan deployment Web App di Google Apps Script telah disetel ke <strong>"Anyone"</strong> dan lakukan Deploy New Version.</p>';
 
           showCustomDialog('Koneksi Terhenti', 'Server tidak merespons dalam batas waktu 8 detik. Pastikan Web App Google Apps Script telah di-deploy dengan akses <strong>Anyone</strong>.', true);
         });
@@ -928,10 +955,10 @@
         return;
       }
 
-      // KASUS 1: POSISI BUKAN MEKANIK DITOLAK
+      // KASUS 1: POSISI NON-MEKANIK DITOLAK KETAT
       if (res.status === 'rejected_position') {
         statusBox.className = 'p-4 rounded-xl border border-red-300 bg-red-50 text-red-800 text-xs space-y-2';
-        statusBox.innerHTML = '<p class="font-extrabold flex items-center gap-1.5 text-red-700 text-sm"><i class="fa-solid fa-ban text-red-600"></i> Akses Terbatas: Khusus Formasi Plant &amp; Mechanic</p>' +
+        statusBox.innerHTML = '<p class="font-extrabold flex items-center gap-1.5 text-red-700 text-sm"><i class="fa-solid fa-ban text-red-600"></i> Akses Terbatas: Khusus Formasi Mekanik &amp; Plant Team</p>' +
           '<p class="text-[11px] leading-relaxed text-red-700">' + res.message + '</p>' +
           '<div class="pt-1 text-[11px] border-t border-red-200 text-red-600 font-semibold">' +
           'Nama Terdaftar: <strong>' + (res.nama || '-') + '</strong> &bull; Posisi Berkas: <strong>' + (res.posisi || '-') + '</strong>' +
@@ -942,10 +969,10 @@
         return;
       }
 
-      // KASUS 2: SUDAH PERNAH MENYELESAIKAN ASESMEN
+      // KASUS 2: SUDAH PERNAH MENGIKUTI ASESMEN
       if (res.status === 'already_completed') {
         statusBox.className = 'p-3.5 rounded-xl border border-red-200 bg-red-50 text-red-700 text-xs space-y-1';
-        statusBox.innerHTML = '<p class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-circle-xmark text-red-600"></i> Sesi Asesmen Selesai</p>' +
+        statusBox.innerHTML = '<p class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-circle-xmark text-red-600"></i> Sesi Ujian Selesai</p>' +
           '<p class="text-[11px] leading-relaxed">' + res.message + '</p>';
         regForm.classList.add('hidden');
         isNikVerified = false;
@@ -957,14 +984,14 @@
       if (res.status === 'not_found') {
         statusBox.className = 'p-3.5 rounded-xl border border-red-200 bg-red-50 text-red-700 text-xs space-y-1';
         statusBox.innerHTML = '<p class="font-bold flex items-center gap-1.5"><i class="fa-solid fa-triangle-exclamation text-red-600"></i> NIK Tidak Terdaftar</p>' +
-          '<p class="text-[11px] leading-relaxed">' + (res.message || ('NIK ' + cleanNik + ' tidak ditemukan di database pelamar.')) + '</p>';
+          '<p class="text-[11px] leading-relaxed">' + (res.message || ('NIK ' + cleanNik + ' tidak ditemukan di database.')) + '</p>';
         regForm.classList.add('hidden');
         isNikVerified = false;
         showCustomDialog('NIK Tidak Ditemukan', res.message || 'Nomor KTP/NIK tidak terdaftar dalam database pelamar terverifikasi.', true);
         return;
       }
 
-      // KASUS 4: SUKSES (MEKANIK TERVERIFIKASI RESMI)
+      // KASUS 4: SUKSES (MEKANIK TERVERIFIKASI)
       if (res.status === 'success') {
         isNikVerified = true;
         nikInput.readOnly = true;
@@ -975,7 +1002,7 @@
         candidateData.posisi = res.posisi || "Mechanic HE Track";
         candidateData.posisiKey = res.roleKey || "he_track";
 
-        // Tampung bank soal bersih yang dikirim server
+        // Muat paket soal bersih dari respon backend
         if (res.packages) {
           serverQuestionPackages.modul1 = res.packages.modul1 || [];
           serverQuestionPackages.modul2 = res.packages.modul2 || [];
@@ -997,7 +1024,7 @@
     }
 
     // ==========================================
-    // MULAI SESI UJIAN & SISTEM ANTI CHEAT
+    // MEMULAI SESI UJIAN MEKANIK
     // ==========================================
     function handleStartExam(e) {
       e.preventDefault();
@@ -1010,7 +1037,7 @@
         return;
       }
       if (!document.getElementById('candAgreement').checked) {
-        showCustomDialog('Pakta Integritas', 'Anda wajib mencentang persetujuan pakta integritas kejujuran ujian.', true);
+        showCustomDialog('Pakta Integritas', 'Anda wajib mencentang persetujuan pakta integritas kejujuran asesmen.', true);
         return;
       }
       if (serverQuestionPackages.modul1.length === 0) {
@@ -1023,7 +1050,7 @@
       document.getElementById('viewExamArena').classList.remove('hidden');
       document.getElementById('examMonitor').classList.remove('hidden');
       document.getElementById('mobileExamDock').classList.remove('hidden');
-      document.getElementById('examScrollFAB').classList.remove('hidden');
+      if (document.getElementById('examScrollFAB')) document.getElementById('examScrollFAB').classList.remove('hidden');
 
       activeModule = 1;
       initiateModule(activeModule);
@@ -1036,18 +1063,36 @@
     }
 
     // ==========================================
-    // SISTEM AUDIT INTEGRITAS (HANYA PERPINDAHAN TAB / MINIMIZE BROWSER)
+    // SISTEM AUDIT INTEGRITAS (TAB SWITCH & DUAL MONITOR / LOSS OF FOCUS DETECTION)
     // ==========================================
+    // 1. Perpindahan Tab / Minimize Jendela Browser (Langsung Tercatat)
     document.addEventListener('visibilitychange', function() {
       if (!isCheatTrackingActive) return;
-      // HANYA hitung saat dokumen benar-benar tidak terlihat (pindah tab atau minimize)
       if (document.visibilityState === 'hidden') {
         registerScreenViolation("Pindah Tab / Minimize Browser");
       }
     });
 
-    // Catatan: window.addEventListener('blur') dinonaktifkan agar tidak sensitif terhadap
-    // pop-up OS, klik dropdown, atau notifikasi lain yang bukan perpindahan tab riil.
+    // 2. Deteksi Klik Layar Kedua / Aplikasi Lain (Dual Monitor / Split Screen)
+    // Diberi toleransi 1.2 detik agar tidak sensitif terhadap kedipan notifikasi sekejap
+    window.addEventListener('blur', function() {
+      if (!isCheatTrackingActive) return;
+      if (blurGraceTimeout) clearTimeout(blurGraceTimeout);
+
+      blurGraceTimeout = setTimeout(() => {
+        if (!document.hasFocus() || document.visibilityState === 'hidden') {
+          registerScreenViolation("Jendela Ujian Kehilangan Fokus (Layar Kedua / Aplikasi Lain)");
+        }
+      }, 1200);
+    });
+
+    // 3. Jika kembali fokus sebelum 1.2 detik, batalkan pelanggaran
+    window.addEventListener('focus', function() {
+      if (blurGraceTimeout) {
+        clearTimeout(blurGraceTimeout);
+        blurGraceTimeout = null;
+      }
+    });
 
     document.addEventListener('keydown', function(e) {
       if (!isCheatTrackingActive) return;
@@ -1098,6 +1143,10 @@
     }
 
     function resumeExamFocus() {
+      if (blurGraceTimeout) {
+        clearTimeout(blurGraceTimeout);
+        blurGraceTimeout = null;
+      }
       const overlay = document.getElementById('antiScreenshotOverlay');
       if (overlay) overlay.classList.add('hidden');
       window.focus();
